@@ -47,7 +47,7 @@ CASE WHEN cst_marital_status = 'S' then 'Single'
      END AS cst_marital_status,
 Case when cst_gndr = 'F' then 'Female'
  	 when cst_gndr = 'M' then 'Male'
- 	 else 'Unknown' 
+ 	 else 'N/A' 
      END AS cst_gndr,
 cst_create_date
 -- removing duplicate records of customers
