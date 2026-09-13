@@ -43,7 +43,7 @@ TRIM(cst_lastname) as cst_lastname,
 -- handaling missing values and readable format
 CASE WHEN cst_marital_status = 'S' then 'Single'
 	 WHEN cst_marital_status = 'M' THEN 'Married'
-	 else 'Unkonwn' 
+	 else 'N/A' 
      END AS cst_marital_status,
 Case when cst_gndr = 'F' then 'Female'
  	 when cst_gndr = 'M' then 'Male'
