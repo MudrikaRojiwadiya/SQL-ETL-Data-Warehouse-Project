@@ -40,7 +40,22 @@ SQL is used for:
 The cleaned and transformed data is integrated into structured warehouse tables for further analysis.
 
 ---
+## 🏗️ Source System Architecture
 
+The project integrates data from two main source systems: CRM and ERP.
+
+### CRM Tables
+- `crm_cust_info` – Customer information
+- `crm_prd_info` – Product information
+- `crm_sales_details` – Sales transactions
+
+### ERP Tables
+- `erp_cust_az12` – Additional customer information
+- `erp_loc_a101` – Customer location information
+- `erp_px_cat_g1v2` – Product category information
+
+---
+  
 ### SQL Techniques Used
 
 SELECT & filtering
@@ -55,5 +70,7 @@ Date Functions
 String Functions
 Data Validation
 Data Cleaning & Transformation
+
+---
 
 ### This project was created as a practical demonstration of SQL, ETL, data cleaning, data transformation, and data warehousing skills.
