@@ -41,17 +41,19 @@ The cleaned and transformed data is integrated into structured warehouse tables 
 
 ---
 
-## Project Structure
+### SQL Techniques Used
 
-```text
-SQL-ETL-Data-Warehouse-Project/
-│
-├── SQL_ETL_Project/
-│   ├── 01_crm_cust_info.sql
-│   ├── 02_crm_prd_info.sql
-│   ├── 03_crm_sales_details.sql
-│   ├── 04_erp_cust_az1.sql
-│   ├── 05_erp_loc_a101.sql
-│   └── 06_erp_px_cat_g1v2.sql
-│
-└── README.md
+SELECT & filtering
+JOINs
+CASE statements
+CTEs
+Window Functions
+ROW_NUMBER()
+LEAD()
+Aggregations
+Date Functions
+String Functions
+Data Validation
+Data Cleaning & Transformation
+
+### This project was created as a practical demonstration of SQL, ETL, data cleaning, data transformation, and data warehousing skills.
