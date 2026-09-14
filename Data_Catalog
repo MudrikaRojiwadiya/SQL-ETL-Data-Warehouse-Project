@@ -1,0 +1,54 @@
+### 1. gold.dim_customers
+
+## Purpose: Stores customer information enriched with demographic and geographic details.
+
+| Column Name       | Data Type    | Description                                                      |
+| ----------------- | ------------ | -------------------------------------------------------------    |
+| `customer_id`     | INT          | Primary key Unique numerical identifier assigned to the customer.|
+| `customer_number` | NVARCHAR(50) | Business identifier used to track and reference the customer.    |
+| `first_name`      | NVARCHAR(50) | Customer's first name.                                           |
+| `last_name`       | NVARCHAR(50) | Customer's last name.                                            |
+| `country`         | NVARCHAR(50) | Customer's country of residence.                                 |
+| `marital_status`  | NVARCHAR(50) | Customer's marital status, such as Married or Single.            |
+| `gender`          | NVARCHAR(50) | Customer's gender.                                               |
+| `birthdate`       | DATE         | Customer's date of birth.                                        |
+| `create_date`     | DATE         | Date on which the customer record was created.                   |
+
+---
+
+### 2. dim_Products
+
+Purpose: Stores the current and integrated product information by combining CRM product data with ERP category details.
+
+| Column Name      | Data Type | Description                                                    |
+| ---------------- | --------- | -------------------------------------------------------------- |
+| `product_id`     | INT       | Unique identifier of the product. Used as the **Primary Key**. |
+| `product_number` | VARCHAR   | Business key/reference number used to identify the product.    |
+| `product_name`   | VARCHAR   | Name of the product.                                           |
+| `cost`           | INT       | Cost associated with the product.                              |
+| `product_line`   | VARCHAR   | Product line or business segment of the product.               |
+| `start_date`     | DATE      | Date from which the current product record became effective.   |
+| `category_id`    | VARCHAR   | Identifier used to link the product with its category.         |
+| `category`       | VARCHAR   | Main category of the product.                                  |
+| `subcategory`    | VARCHAR   | More specific classification within the product category.      |
+| `maintenance`    | VARCHAR   | Indicates whether the product requires maintenance.            |
+
+
+---
+
+### 3.fact_Sales
+
+Purpose: Stores sales transaction details from the CRM sales system, including order, product, customer, dates, sales amount, price, and quantity.
+
+| Column Name      | Data Type | Description                                           |
+| ---------------- | --------- | ----------------------------------------------------- |
+| `order_number`   | VARCHAR   | Unique business reference number for the sales order. |
+| `product_number` | VARCHAR   | Product business key identifying the product sold.    |
+| `customer_id`    | INT       | Identifier of the customer who made the purchase.     |
+| `order_date`     | DATE      | Date on which the sales order was placed.             |
+| `shipping_date`  | DATE      | Date on which the order was shipped.                  |
+| `due_date`       | DATE      | Date by which the order was expected to be delivered. |
+| `sales_amount`   | INT       | Total sales amount generated from the transaction.    |
+| `price`          | INT       | Price of the product at the time of the sale.         |
+| `quantity`       | INT       | Number of units sold in the transaction.              |
+
